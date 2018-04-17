@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--
+bookRegistration.hmtl
+Tung Pham IPD12 - 2018
+Assignment1
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Book Registration</title>
+        <link rel="stylesheet" href="style.css"/>
+        <script src="myscripts.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1><?php echo ucwords("book registration form"); ?></h1>
+            </header>
+
+            <main>
+                <form action="bookRegistration.php" method="post">
+                    <p>Please fill in all fields and click Register.</p>
+                    <!-- user information -->
+                    <p class="bg_hightlighted">User information</p>
+                    <p class="fg_hightlighted">Please fill out the fields below</p>
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firstName" required=""><br>
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" required=""><br>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required=""><br>
+                    <label for="phone">Phone</label>
+                    <input type="text" id="phone" name="phone" required=""><br>
+
+                    <!-- publications -->
+                    <p class="bg_hightlighted">Publications</p>
+                    <p class="fg_hightlighted">Which book would you like information about</p>
+                    <select>
+                        <option value="programming PHP">Programming PHP 3E</option>
+                        <option value="Practical PHP and MySQL Website Databases">Practical PHP and MySQL Website Databases</option>
+                        <option value="PHP Quick Scripting Reference">PHP Quick Scripting Reference</option>
+                        <option value="Object-Oriented PHP">Object-Oriented PHP</option>
+                    </select>
+
+                    <!-- operating system -->
+                    <p class="bg_hightlighted">Operating System</p>
+                    <p class="fg_hightlighted">Which operating system are you currently using</p>
+                    <input type="radio" name="os" value="Windows XP"> Windows XP
+                    <input type="radio" name="os" value="Windows Vista"> Windows Vista<br>
+                    <input type="radio" name="os" value="Mac OS X"> Mac OS X
+                    <input type="radio" name="os" value="Linux"> Linux
+                    <input type="radio" name="os" value="Other"> Other
+                    <br><br>
+                    <!-- submit -->
+                    <input type="submit" value="Register">
+                </form>
+
+            </main>
+        </div>
+    </body>
+</html>

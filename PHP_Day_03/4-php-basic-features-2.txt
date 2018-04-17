@@ -1,4 +1,4 @@
-PHP Basic Features 2 
+﻿PHP Basic Features 2 
 ====================
 You can attach two string values together. They can either be actual strings or variables that have strings in them. This is called concatenation. You use a period (.) to concatenate the different strings:
 
@@ -109,18 +109,3 @@ Here's another string function that takes a fl oat number and displays it as a f
 $number = '15';
 echo number_format($number, 2);
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

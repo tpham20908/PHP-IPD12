@@ -1,0 +1,39 @@
+.container {
+    max-width: 480px;
+    margin: 20px auto;
+    background-color: #eee;
+    border: 2px solid blue;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.bg_hightlighted {
+    padding: 5px;
+    width: 180px;
+    background-color: #22e4;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    border-radius: 0 20px 20px 0;
+}
+
+.fg_hightlighted {
+    color: blue;
+}
+
+label {
+    display: inline-block;
+    width: 90px;
+    background-color: #000;
+    color: #fff;
+    margin: 5px;
+    border-radius: 20% 40% 40% 20%;
+    padding: 3px;
+}
+label + input {
+    width: 200px;
+}
+
+select {
+    width: 320px;
+    height: 24px;
+}

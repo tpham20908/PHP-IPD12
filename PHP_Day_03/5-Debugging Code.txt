@@ -1,4 +1,4 @@
-Debugging Code
+﻿Debugging Code
 ==============
 Display Errors while Developing
 You want errors to be displayed for you while you are developing your code. To do this, make sure that display_errors is on in your php.ini file. You can check this by running phpinfo(). If you are using XAMPP, display_errors is on by default because it is set up for development, not production. This is the code for running phpinfo():
@@ -32,16 +32,3 @@ $firstName = 'Andy';
 $nameLength = str_len($firstName);
 $myVar = 'Hi, my name is ' . $nameLength. ' letters long.';
 echo $myVar;
-	
-	
-	
-
-
-
-
-
-
-
-
-
-

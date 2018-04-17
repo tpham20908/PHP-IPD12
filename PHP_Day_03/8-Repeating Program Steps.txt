@@ -1,4 +1,4 @@
-Repeating Program Steps
+﻿Repeating Program Steps
 ========================
 Loops let you repeat blocks of code multiple times. Depending on the type of loop, you can repeat the code a given amount of times or while a certain condition is true.
 
@@ -132,19 +132,3 @@ endif; ?>
 </ul>
 
 If you have multiple nested loops, you can use a numeric argument to skip to the next iteration of enclosing loops.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
