@@ -15,7 +15,7 @@ Assignment1
     <body>
         <div class="container">
             <header>
-                <h1><?php echo ucwords("book registration form"); ?></h1>
+                <h1>Book Registration Form</h1>
             </header>
 
             <main>
@@ -32,11 +32,12 @@ Assignment1
                     <input type="email" id="email" name="email" required=""><br>
                     <label for="phone">Phone</label>
                     <input type="text" id="phone" name="phone" required=""><br>
+                    <p style="margin: 0; padding: 0; margin-left: 90px;">Must be in form (555)555-5555</p>
 
                     <!-- publications -->
                     <p class="bg_hightlighted">Publications</p>
                     <p class="fg_hightlighted">Which book would you like information about</p>
-                    <select>
+                    <select name="book" id="book">
                         <option value="programming PHP">Programming PHP 3E</option>
                         <option value="Practical PHP and MySQL Website Databases">Practical PHP and MySQL Website Databases</option>
                         <option value="PHP Quick Scripting Reference">PHP Quick Scripting Reference</option>
@@ -46,7 +47,7 @@ Assignment1
                     <!-- operating system -->
                     <p class="bg_hightlighted">Operating System</p>
                     <p class="fg_hightlighted">Which operating system are you currently using</p>
-                    <input type="radio" name="os" value="Windows XP"> Windows XP
+                    <input type="radio" name="os" value="Windows XP" checked=""> Windows XP
                     <input type="radio" name="os" value="Windows Vista"> Windows Vista<br>
                     <input type="radio" name="os" value="Mac OS X"> Mac OS X
                     <input type="radio" name="os" value="Linux"> Linux

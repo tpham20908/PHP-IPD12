@@ -9,8 +9,10 @@
 
 .bg_hightlighted {
     padding: 5px;
+    padding-left: 15px;
     width: 180px;
-    background-color: #22e4;
+    background-color: #27e;
+    color: #fff;
     border-bottom: 2px solid black;
     border-right: 2px solid black;
     border-radius: 0 20px 20px 0;
