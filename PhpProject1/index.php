@@ -13,7 +13,7 @@
           echo longdate(time()) . "<br>";
           echo longdate(time() + 7*24*60*60);
          */
-
+        
         echo "Chapter 3 examples: " . "<br>";
 
         // passing funciton parameters by reference
@@ -115,7 +115,6 @@ _EOD;
         fwrite($fh, $text);
         fclose($fh);
         echo "File 'testfile.txt' written successfully." . "<br>";
-        
         ?>
     </body>
 </html>
