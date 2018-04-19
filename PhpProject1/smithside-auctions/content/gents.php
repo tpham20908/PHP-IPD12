@@ -27,7 +27,7 @@ $lots[1]["description"] = "Orange and white pin-striped twill cotton, double bre
                 frayed) good.";
 $lots[1]["price"] = 20700.00;
 
-$lots[2]["lot_number"] = "2";
+$lots[2]["lot_number"] = "3";
 $lots[2]["name"] = "Black Broadcloth Tailcoat, 1830-1845";
 $lots[2]["image"] = "gents-striped-8-26.jpg";
 $lots[2]["description"] = "Orange and white pin-striped twill cotton, double breasted, turn down collar, waist seam, 
