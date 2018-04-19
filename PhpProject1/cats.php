@@ -36,7 +36,8 @@ for ($i = 0; $i < $rows; $i++) {
 echo "</table>";
 */
 
-$query = "DESCRIBE cats";
+$query = "INSERT INTO cats VALUES (NULL, \"Cheetah\", \"Charly\", 3);";
+        
 
 $result = $conn->query($query);
 if (!$result) die ("Database access failed: " . $conn->error);
