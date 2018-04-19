@@ -7,10 +7,10 @@ class Pages extends Controller {
     }
 
     public function index() {
-        $this->view("Hello");
+        
     }
 
-    public function about($id) {
-        echo $id;
+    public function about() {
+        
     }
 }
