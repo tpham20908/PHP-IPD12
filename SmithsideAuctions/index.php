@@ -6,14 +6,11 @@
  * 
  * @version 1.2 2018-04-16
  * @package Smithside Auction KD
- * @copyright (c) 2018, Jing Wang
+ * @copyright (c) 2018, Tung Pham
  * @license GNU General Public Source
  * @since release 1.0
  */
 require_once 'includes/init.php';
-
-
-
 ?>
 
 <!DOCTYPE html>
