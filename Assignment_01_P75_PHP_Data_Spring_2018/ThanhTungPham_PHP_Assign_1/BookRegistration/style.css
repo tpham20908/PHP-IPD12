@@ -1,0 +1,61 @@
+body {
+    font-size: 18px;
+}
+
+.container {
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: #eee;
+    border: 2px solid black;
+    padding: 10px 50px;
+}
+
+.bg_hightlighted {
+    padding: 5px;
+    padding-left: 15px;
+    width: 180px;
+    background-color: #27e;
+    color: #fff;
+    border-bottom: 3px solid #223;
+    border-right: 3px solid #223;
+    border-radius: 0 20px 20px 0;
+}
+
+.fg_hightlighted {
+    color: blue;
+}
+
+label {
+    display: inline-block;
+    width: 90px;
+    background-color: #000;
+    color: #fff;
+    margin: 5px;
+    border-radius: 15% 37% 37% 15%;
+    padding: 3px 7px;
+}
+label + input {
+    width: 200px;
+    
+}
+
+select {
+    width: 320px;
+    height: 24px;
+}
+
+span.red {
+    color: red;
+}
+
+span.blue {
+    color: blue;
+}
+
+thead>tr>td {
+    background-color: #ff9;
+    text-align: center;
+}
+td {
+    padding: 3px 10px;
+}
