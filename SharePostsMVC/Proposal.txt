@@ -1,4 +1,5 @@
 Posts Sharing Project Features:
+
 - Will include full MVC workflow.
 - Will have a base controller to load models and views.
 - Will have a database library class that uses PDO.

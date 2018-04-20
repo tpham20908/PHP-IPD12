@@ -2,8 +2,8 @@
 
   $hn = "localhost";
   $db = "publications";
-  $un = "tung";
-  $pw = "tung";
+  $un = "root";
+  $pw = "";
 /*
 $hn = "den1.mysql4.gear.host";
 $db = "jac18";
