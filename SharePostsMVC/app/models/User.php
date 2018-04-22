@@ -6,6 +6,16 @@ class User {
         $this->db = new Database;
     }
     
+    // Login User
+    public function login($email, $password) {
+        $sql = "SELECT * FROM users WHERE email = :email;";
+        $this->db->query($sql);
+        $this->db->bind(":email", $email);
+        $row = $this->db->single();
+        $hashed_password = $row->password;
+        return password_verify($password, $hashed_password) ? $row : false;
+    }
+
     // Register user
     public function register($data) {
         $sql = "INSERT INTO users (name, email, password) VALUES (:name, :email, :password);";
