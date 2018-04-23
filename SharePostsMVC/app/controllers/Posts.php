@@ -81,6 +81,7 @@ class Posts extends Controller {
             // Sanitize POST array
             $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
             $data = [
+                "id" => $id,
                 "title" => trim($_POST["title"]),
                 "body" => trim($_POST["body"]),
                 "user_id" => $_SESSION["user_id"],
@@ -126,6 +127,19 @@ class Posts extends Controller {
             ];
             
             $this->view("posts/edit", $data);
+        }
+    }
+    
+    public function delete($id) {
+        if($_SERVER["REQUEST_METHOD"] == "POST") {
+            if($this->postModel->deletePost($id)) {
+                flash("post_message", "Post Removed");
+                redirect("posts");
+            } else {
+                die("Something went wrong");
+            }
+        } else {
+            redirect("posts");
         }
     }
 }
