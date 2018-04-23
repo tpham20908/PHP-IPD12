@@ -28,4 +28,11 @@ class Post {
         // Execute
         return $this->db->execute();
     }
+    
+    public function getPostById($id) {
+        $sql = "SELECT * FROM posts WHERE id = $id";
+        $this->db->query($sql);
+        $row = $this->db->single();
+        return $row;
+    }
 }
