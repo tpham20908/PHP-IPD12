@@ -1,7 +1,7 @@
 <?php
 class Users extends Controller {
     public function __construct() {
-        ;
+        $this->userModel = $this->model("User");
     }
     
     public function register() {
@@ -25,6 +25,10 @@ class Users extends Controller {
             // Validate email
             if (empty($data["email"])) {
                 $data["email_err"] = "Please enter email";
+            } else {
+                if ($this->userModel->findUserByEmail($data["email"])) {
+                    $data["email_err"] = "Email is already taken";
+                }
             }
             // Validate name
             if (empty($data["name"])) {
@@ -47,7 +51,18 @@ class Users extends Controller {
             
             // Make sure errors are empty
             if (empty($data["email_err"]) && empty($data["name_err"]) &&empty($data["password_err"]) && empty($data["confirm_password_err"])) {
-                die ("SUCCESS");
+                // Validate
+                
+                // Hash Password
+                $data["password"] = password_hash($data["password"], PASSWORD_DEFAULT);
+                
+                // Register User
+                if ($this->userModel->register($data)) {
+                    flash("register_success", "You are registered and can log in");
+                    redirect("users/login");
+                } else {
+                    die("Something went wrong");
+                }
             } else {
                 // Load view with errors
                 $this->view("users/register", $data);
@@ -94,9 +109,27 @@ class Users extends Controller {
                 $data["password_err"] = "Please enter password";
             }
             
+            // Check for user/email
+            if ($this->userModel->findUserByEmail($data["email"])) {
+                // User found
+            } else {
+                // User not found
+                $data["email_err"] = "No user found";
+            }
+            
             // Make sure errors are empty
             if (empty($data["email_err"]) &&empty($data["password_err"])) {
-                die ("SUCCESS");
+                // Validated
+                // Check and set logged in user
+                $loggedInUser = $this->userModel->login($data["email"], $data["password"]);
+                
+                if ($loggedInUser) {
+                    // Create Session
+                    $this->createUserSession($loggedInUser);
+                } else {
+                    $data["password_err"] = "Password incorrect";
+                    $this->view("users/login", $data);
+                }
             } else {
                 // Load view with errors
                 $this->view("users/login", $data);
@@ -114,5 +147,20 @@ class Users extends Controller {
             // Load view
             $this->view("users/login", $data);
         }
+    }
+    
+    public function createUserSession($user) {
+        $_SESSION["user_id"] = $user->id;
+        $_SESSION["user_email"] = $user->email;
+        $_SESSION["user_name"] = $user->name;
+        redirect("posts");
+    }
+    
+    public function logout() {
+        unset($_SESSION["user_id"]);
+        unset($_SESSION["user_email"]);
+        unset($_SESSION["user_name"]);
+        session_destroy();
+        redirect("users/login");
     }
 }

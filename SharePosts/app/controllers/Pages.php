@@ -7,6 +7,9 @@ class Pages extends Controller {
     }
 
     public function index() {
+        if (isLoggedIn())
+            redirect("posts");
+        
         $data = [
             "title" => "Share Posts",
             "description" => "Social network build on the PHP MVC and Bootstrap Framework"
