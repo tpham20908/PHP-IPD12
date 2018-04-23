@@ -1,0 +1,22 @@
+/*
+use mydb1;
+ create table Customers (
+    CustomerID int auto_increment,
+    CompanyName varchar(60) not null,
+    Phone varchar(15) not null,
+    constraint pk_Customers primary key (CustomerId asc)
+);
+
+create table Orders (
+    OrderID smallint not null auto_increment,
+    OrderDate datetime not null,
+    ShippedDate datetime null,
+    CustomerId int null,
+    constraint pk_Orders primary key clustered (OrderId asc)
+);
+*/
+
+alter table Orders
+-- Syntax: add constraint constraint_name constraint_type
+    add constraint fk_Orders_Customers foreign key (CustomerId)
+    references Customers (CustomerId);
