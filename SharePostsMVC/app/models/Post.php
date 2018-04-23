@@ -47,4 +47,11 @@ class Post {
         // Execute
         return $this->db->execute();
     }
+    
+    public function deletePost($id) {
+        $sql = "DELETE FROM posts WHERE id = $id;";
+        $this->db->query($sql);
+        // Execute
+        return $this->db->execute();
+    }
 }
