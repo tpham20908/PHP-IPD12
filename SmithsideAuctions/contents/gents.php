@@ -56,16 +56,15 @@ $lots[2]["price"] = 3450.00;
                     // set up the image
                     $image = "images/" . $lots[$counter]["image"];
                     $image_t = "images/thumbnails/" . $lots[$counter]["image"];
-                    /*
+                    
                     if (!is_file($image_t)) :
                         $image_t = "images/thumbnails/nophoto.jpg";
                     endif;
-                    */
 
-                    if (!is_file($image)) :
+                    if (is_file($image)) :
                         ?>
                         <a href="<?php echo $image; ?>">
-                            <img src="images/thumbnails/<?php echo $lots[$counter]['image']; ?>" />
+                            <img src="<?php echo $image_t; ?>" />
                         </a>
                     <?php endif; ?>
 

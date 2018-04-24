@@ -1,6 +1,6 @@
 <?php
 
-/* 
+/*
  * contact.php
  * contact class file
  * @version 1.2 2018-04-19
@@ -11,13 +11,14 @@
  * @author Tung Pham
  */
 
-class Contact{
+class Contact {
+
     protected $first_name;
     protected $last_name;
     protected $position;
     protected $email;
     protected $phone;
-    
+
     //function __construct($first_name, $last_name, $position, $email, $phone) {
 //        $this->first_name = $first_name;
 //        $this->last_name = $last_name;
@@ -25,16 +26,16 @@ class Contact{
 //        $this->email = $email;
 //        $this->phone = $phone;
     //}
-    
+
     function __construct($input) {
         if (is_array($input)) {
-            foreach ($input as $key=>$val) {
+            foreach ($input as $key => $val) {
                 $this->$key = $val;
             }
         }
-          
     }
-                function getFirst_name() {
+
+    function getFirst_name() {
         return $this->first_name;
     }
 
@@ -73,14 +74,13 @@ class Contact{
     function setPhone($phone) {
         $this->phone = $phone;
     }
-    
+
     /**
      * contactName function concatenates the first and the last name
      */
-    public function contactName(){
+    public function contactName() {
         $contactName = $this->first_name . ' ' . $this->last_name;
         return $contactName;
     }
-    
-}
 
+}
