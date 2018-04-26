@@ -1,5 +1,6 @@
-<hr />
-<footer class="footer">
+
+<footer class="footer mt-5">
+    <hr />
     <div class="container">
         <p>&copy; 2018 - Tung Pham IPD12 - PHP MVC application</p>
     </div>
